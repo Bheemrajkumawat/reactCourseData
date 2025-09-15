@@ -124,53 +124,87 @@
 
 // export default App;
 
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppLayout from "./ReactRouterDom/Components/Layout/AppLayout";
-import Home from "./ReactRouterDom/pages/Home";
-import About from "./ReactRouterDom/pages/About";
-import Movie from "./ReactRouterDom/pages/Movie";
-import Contact from "./ReactRouterDom/pages/Contact";
-import ErrorPage from "./ReactRouterDom/pages/ErrorPage";
-import { getMoviesData } from "./ReactRouterDom/api/GetApi";
-import { MovieDetails } from "./ReactRouterDom/Components/Ui/MovieDetails";
-import { GetMOviderails } from "./ReactRouterDom/Components/Ui/GetMovidetails";
-import { contactData } from "./ReactRouterDom/Components/Layout/ContactForm";
+// project Reactrouterdom
+// import React from "react";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import AppLayout from "./ReactRouterDom/Components/Layout/AppLayout";
+// import Home from "./ReactRouterDom/pages/Home";
+// import About from "./ReactRouterDom/pages/About";
+// import Movie from "./ReactRouterDom/pages/Movie";
+// import Contact from "./ReactRouterDom/pages/Contact";
+// import ErrorPage from "./ReactRouterDom/pages/ErrorPage";
+// import { getMoviesData } from "./ReactRouterDom/api/GetApi";
+// import { MovieDetails } from "./ReactRouterDom/Components/Ui/MovieDetails";
+// import { GetMOviderails } from "./ReactRouterDom/Components/Ui/GetMovidetails";
+// import { contactData } from "./ReactRouterDom/Components/Layout/ContactForm";
+
+// function App() {
+//   const router = createBrowserRouter([
+//     {
+//       path: "/",
+//       element: <AppLayout />,
+//       errorElement: <ErrorPage />,
+//       children: [
+//         {
+//           path: "/",
+//           element: <Home />,
+//         },
+//         {
+//           path: "about",
+//           element: <About />,
+//         },
+//         {
+//           path: "/movie",
+//           element: <Movie />,
+//           loader: getMoviesData,
+//         },
+//         {
+//           path: "/movie/:movieID",
+//           element: <MovieDetails />,
+//           loader: GetMOviderails,
+//         },
+//         {
+//           path: "/contact",
+//           element: <Contact />,
+//           action: contactData,
+//         },
+//       ],
+//     },
+//   ]);
+//   return <RouterProvider router={router} />;
+// }
+
+// export default App;
+
+// Axios project data to fact api
+
+// import React from 'react'
+// import { Movies } from './AxiosFachdata/pages/Movies'
+
+// function App() {
+//   return (
+//     <div>
+//       <Movies/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+/// crud aplication axios
+import React, { useEffect } from "react";
+import { getpost } from "./Crud project/Api/Postapi";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <AppLayout />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "about",
-          element: <About />,
-        },
-        {
-          path: "/movie",
-          element: <Movie />,
-          loader: getMoviesData,
-        },
-        {
-          path: "/movie/:movieID",
-          element: <MovieDetails />,
-          loader: GetMOviderails,
-        },
-        {
-          path: "/contact",
-          element: <Contact />,
-          action: contactData,
-        },
-      ],
-    },
-  ]);
-  return <RouterProvider router={router} />;
+  // console.log(getpost());
+  const getpostData = async () => {
+    const res = await getpost();
+    console.log(res);
+  };
+  useEffect(() => {
+    getpostData();
+  }, []);
+  return <div></div>;
 }
 
 export default App;

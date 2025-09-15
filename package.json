@@ -12,8 +12,11 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fontsource/roboto": "^5.2.7",
+    "@mui/icons-material": "^7.3.2",
     "@mui/material": "^7.3.2",
     "@tailwindcss/vite": "^4.1.12",
+    "axios": "^1.12.2",
     "react": "^19.2.0-canary-2805f0ed-20250903",
     "react-dom": "^19.2.0-canary-2805f0ed-20250903",
     "react-icons": "^5.5.0",
