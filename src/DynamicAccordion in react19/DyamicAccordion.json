@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "What is React?",
+    "answer": "React is a JavaScript library for building user interfaces."
+  },
+  {
+    "id": 2,
+    "question": "What is an Accordion?",
+    "answer": "Accordion is a UI component that expands and collapses content sections."
+  },
+  {
+    "id": 3,
+    "question": "Why do we use Accordion?",
+    "answer": "It saves space and makes the UI more user-friendly by hiding and showing content."
+  },
+  {
+    "id": 4,
+    "question": "What is JSX?",
+    "answer": "JSX is a syntax extension in React that lets you write HTML-like code inside JavaScript."
+  },
+  {
+    "id": 5,
+    "question": "What are React Hooks?",
+    "answer": "Hooks are functions in React that let you use state and lifecycle features without writing classes."
+  },
+  {
+    "id": 6,
+    "question": "What is useState in React?",
+    "answer": "useState is a React Hook that lets you add state to functional components."
+  },
+  {
+    "id": 7,
+    "question": "What is useEffect in React?",
+    "answer": "useEffect is a Hook that lets you perform side effects like fetching data or updating the DOM."
+  },
+  {
+    "id": 8,
+    "question": "What is a component in React?",
+    "answer": "A component is a reusable piece of UI that can have its own logic and styling."
+  },
+  {
+    "id": 9,
+    "question": "What is props in React?",
+    "answer": "Props are inputs to components. They are used to pass data from parent to child components."
+  },
+  {
+    "id": 10,
+    "question": "What is state in React?",
+    "answer": "State is an object that holds dynamic data and controls component behavior."
+  }
+]

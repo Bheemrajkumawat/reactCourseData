@@ -124,7 +124,7 @@
 
 // export default App;
 
-// project Reactrouterdom
+//// project Reactrouterdom
 // import React from "react";
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import AppLayout from "./ReactRouterDom/Components/Layout/AppLayout";
@@ -176,7 +176,7 @@
 
 // export default App;
 
-// Axios project data to fact api
+// //Axios project data to fact api
 
 // import React from 'react'
 // import { Movies } from './AxiosFachdata/pages/Movies'
@@ -191,16 +191,38 @@
 
 // export default App
 
-/// crud aplication axios
-import React from "react";
-import Apidata from "./Crud project/data/Apidata";
+
+
+
+
+
+// //crud aplication axios
+// import React from "react";
+// import Apidata from "./Crud project/data/Apidata";
+
+// function App() {
+//   return (
+//     <>
+//      <Apidata/>
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+
+//// DynamicAccordion in reactv19
+
+import React from 'react'
+import { Accordion } from './DynamicAccordion in react19/Accordion'
 
 function App() {
   return (
-    <>
-     <Apidata/>
-    </>
-  );
+    <div>
+        <Accordion/>
+    </div>
+  )
 }
 
-export default App;
+export default App
