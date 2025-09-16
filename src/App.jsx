@@ -214,13 +214,31 @@
 
 //// DynamicAccordion in reactv19
 
+// import React from 'react'
+// import { Accordion } from './DynamicAccordion in react19/Accordion'
+
+// function App() {
+//   return (
+//     <div>
+//         <Accordion/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+// //responsive navbar in react project
+
 import React from 'react'
-import { Accordion } from './DynamicAccordion in react19/Accordion'
+import Navbar from './Create a responsive Navbar /Navbar'
 
 function App() {
   return (
     <div>
-        <Accordion/>
+      <Navbar/>
     </div>
   )
 }
