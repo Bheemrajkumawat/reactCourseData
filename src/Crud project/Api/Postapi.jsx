@@ -1,8 +1,13 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL:"https://jsonplaceholder.typicode.com/posts"
-})
-export const getpost =()=>{
-    return api.get(" ");
-}
+  baseURL: "https://jsonplaceholder.typicode.com",
+});
+export const getpost = () => {
+  return api.get("/posts");
+};
+
+export const deletePost = (id) => {
+  return api.delete(`/posts/${id}`);
+};
+ 

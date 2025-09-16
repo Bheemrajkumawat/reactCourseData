@@ -192,19 +192,15 @@
 // export default App
 
 /// crud aplication axios
-import React, { useEffect } from "react";
-import { getpost } from "./Crud project/Api/Postapi";
+import React from "react";
+import Apidata from "./Crud project/data/Apidata";
 
 function App() {
-  // console.log(getpost());
-  const getpostData = async () => {
-    const res = await getpost();
-    console.log(res);
-  };
-  useEffect(() => {
-    getpostData();
-  }, []);
-  return <div></div>;
+  return (
+    <>
+     <Apidata/>
+    </>
+  );
 }
 
 export default App;
