@@ -7,7 +7,7 @@ export const getpost = () => {
   return api.get("/posts");
 };
 
-// delete Apis
+// delete Apisss
 export const deletePost = (id) => {
   return api.delete(`/posts/${id}`);
 };

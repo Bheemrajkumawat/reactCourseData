@@ -35,6 +35,7 @@ function Form({ posts, setPosts, updateDataApi, setupdateDataApi }) {
     if (res.status === 201) {
       setPosts([...posts, res.data]);
       setAddData({ title: "", body: "" });
+      setupdateDataApi({});
     }
   };
   // updatePostData
@@ -44,7 +45,7 @@ function Form({ posts, setPosts, updateDataApi, setupdateDataApi }) {
       console.log(res);
       setPosts((prev) => {
         return prev.map((data) => {
-          return posts.id === updateDataApi.id? res.posts : data;
+          return posts.id === updateDataApi.id ? res.posts : data;
         });
       });
     } catch (error) {
