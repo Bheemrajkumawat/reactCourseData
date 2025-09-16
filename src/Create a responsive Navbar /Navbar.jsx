@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Contactpage from "./Dynamic contact section /Contactpage";
 
 function Navbar() {
   const [Opendata, setOpendata] = useState(false);
@@ -51,6 +52,7 @@ function Navbar() {
             </ul>
           )}
         </div>
+         <Contactpage/>
       </div>
     </>
   );

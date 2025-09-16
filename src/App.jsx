@@ -191,11 +191,6 @@
 
 // export default App
 
-
-
-
-
-
 // //crud aplication axios
 // import React from "react";
 // import Apidata from "./Crud project/data/Apidata";
@@ -209,8 +204,6 @@
 // }
 
 // export default App;
-
-
 
 //// DynamicAccordion in reactv19
 
@@ -227,20 +220,18 @@
 
 // export default App
 
-
-
-
 // //responsive navbar in react project
 
-import React from 'react'
-import Navbar from './Create a responsive Navbar /Navbar'
+import React from "react";
+
+import Home from "./Create a responsive Navbar /Dynamic contact section /Home";
 
 function App() {
   return (
     <div>
-      <Navbar/>
+      <Home />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
