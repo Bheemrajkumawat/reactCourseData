@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { deletePost, getpost } from "../Api/Postapi";
 import { CardApidata } from "./CardApidata";
-import { Box, Grid, TextField } from "@mui/material";
+import { Box, Button, CircularProgress, Grid, TextField } from "@mui/material";
+import Form from "./Form";
 function Apidata() {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoding] = useState(true);
   const mydata = async () => {
     try {
       console.log("API call started...");
@@ -11,6 +13,7 @@ function Apidata() {
       console.log(res);
       console.log(res.data);
       setPosts(res.data);
+      setLoding(false);
     } catch (error) {
       console.log(error);
     }
@@ -35,40 +38,37 @@ function Apidata() {
       console.log(error);
     }
   };
+
   return (
     <>
       <div style={{ padding: "20px" }}>
         <h2 style={{ textAlign: "center" }}>Posts Data</h2>
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          gap={2}
-          mb={4}
-        >
-          <TextField label="ADD TITLE" name="text" sx={{ width: 400 }} />
-          <TextField label="ADD POST" name="text" sx={{ width: 400 }} />
-        </Box>
-
-        <Grid container spacing={2} justifyContent="center">
-          {posts.map((value) => {
-            return (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={4}
-                style={{ display: "flex", justifyContent: "center" }}
-              >
-                <CardApidata
-                  key={value.id}
-                  value={value}
-                  handleDeletePost={handleDeletePost}
-                />
-              </Grid>
-            );
-          })}
-        </Grid>
+        <Form posts={posts} setPosts={setPosts} />
+        {loading ? (
+          <div className="flex justify-center items-center h-screen">
+            <CircularProgress />
+          </div>
+        ) : (
+          <Grid container spacing={2} justifyContent="center">
+            {posts.map((value) => {
+              return (
+                <Grid
+                  item
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <CardApidata
+                    key={value.id}
+                    value={value}
+                    handleDeletePost={handleDeletePost}
+                  />
+                </Grid>
+              );
+            })}
+          </Grid>
+        )}
       </div>
     </>
   );
