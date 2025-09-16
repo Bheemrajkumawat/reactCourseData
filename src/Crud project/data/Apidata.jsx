@@ -6,6 +6,7 @@ import Form from "./Form";
 function Apidata() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoding] = useState(true);
+  const [updateDataApi, setUpdateDataApi] = useState({});
   const mydata = async () => {
     try {
       console.log("API call started...");
@@ -38,12 +39,18 @@ function Apidata() {
       console.log(error);
     }
   };
+  const handleUpdatePost = (curElem) => setUpdateDataApi(curElem);
 
   return (
     <>
       <div style={{ padding: "20px" }}>
         <h2 style={{ textAlign: "center" }}>Posts Data</h2>
-        <Form posts={posts} setPosts={setPosts} />
+        <Form
+          posts={posts}
+          setPosts={setPosts}
+          updateDataApi={updateDataApi}
+          setUpdateDataApi={setUpdateDataApi}
+        />
         {loading ? (
           <div className="flex justify-center items-center h-screen">
             <CircularProgress />
@@ -63,6 +70,7 @@ function Apidata() {
                     key={value.id}
                     value={value}
                     handleDeletePost={handleDeletePost}
+                    handleUpdatePost={handleUpdatePost}
                   />
                 </Grid>
               );

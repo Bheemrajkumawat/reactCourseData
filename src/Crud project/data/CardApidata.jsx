@@ -8,7 +8,7 @@ import {
   SubmitButton,
 } from "../CardApidata.styles"; 
 
-export const CardApidata = ({ value,handleDeletePost }) => {
+export const CardApidata = ({ value, handleDeletePost , handleUpdatePost}) => {
   const { title = "No Title", body = "No Content Available",id } = value || {};
  
   return (
@@ -21,7 +21,7 @@ export const CardApidata = ({ value,handleDeletePost }) => {
       </CardContent>
 
       <Box display="flex" justifyContent="center" gap={2} mt={2}>
-        <CancelButton >EDIT</CancelButton>
+        <CancelButton onClick={()=> handleUpdatePost(value)}>EDIT</CancelButton>
         <SubmitButton onClick={()=>handleDeletePost(id)}>DELETE</SubmitButton>
       </Box>
     </CustomCard>
